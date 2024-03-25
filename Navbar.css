@@ -1,0 +1,30 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 15vh;
+    width: calc(100% + 18px);
+    background: #004864;
+    position: relative;
+    border-bottom: 6px solid rgb(0, 0, 0);
+    z-index: 1000;
+  }
+  
+  .nav_left {
+    margin-right: 20px; /* Adjusted */
+  }
+  
+  .nav_menu {
+    display: flex;
+    align-items: center;
+    gap: 4rem; /* Adjusted */
+  }
+
+  .nav_logo {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 40px; /* Adjust spacing between logo and menu */
+    margin-top: 10px;
+  }
+  
+  
