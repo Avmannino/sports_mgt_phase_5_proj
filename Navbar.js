@@ -3,8 +3,6 @@ import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 import syncLogo from './assets/sync_logo.png';
 
-
-
 function Navbar() {
     const location = useLocation();
     const [active, setActive] = useState("nav_menu");
@@ -21,7 +19,7 @@ function Navbar() {
     };
 
     return (
-        <nav className="nav">
+        <nav className={`nav ${active ? 'nav_active' : ''}`}>
             {showLogo && (
                 <div className="nav_left">
                     <Link to="/" className="nav_logo_link">
@@ -30,14 +28,19 @@ function Navbar() {
                 </div>
             )}
             <ul className={active}>
-                <li className="nav_item"><Link to="/home" className="nav_link">Home</Link></li>
-                <li className="nav_item"><Link to="/sports" className="nav_link">Sports</Link></li>
-                <li className="nav_item"><Link to="/schedules" className="nav_link">Schedules</Link></li>
-                <li className="nav_item"><Link to="/stats" className="nav_link">Stats</Link></li>
-                <li className="nav_item"><Link to="/admin" className="nav_link">Admin Portal</Link></li>
-                <li className="nav_item"><Link to="/settings" className="nav_link">Settings</Link></li>
+                <div className="nav_item"><Link to="/home" className="home_link">Home</Link></div>
+                <div className="nav_item sports_dropdown">
+                    <Link to="/sports" className="sports_link">Sports</Link>
+                    <div className="dropdown_content">
+                        <Link to="/football" className="dropdown_item">Football</Link>
+                        <Link to="/basketball" className="dropdown_item">Basketball</Link>
+                        <Link to="/tennis" className="dropdown_item">Tennis</Link>
+                    </div>
+                </div>
+                <div className="nav_item"><Link to="/schedules" className="schedules_link">Schedules</Link></div>
+                <div className="nav_item"><Link to="/pricing" className="pricing_link">Pricing</Link></div>
+                <div className="nav_item"><Link to="/settings" className="settings_link">Settings</Link></div>
             </ul>
-
             <div onClick={navToggle} className={toggleIcon}>
                 <div className="line1"></div>
                 <div className="line2"></div>

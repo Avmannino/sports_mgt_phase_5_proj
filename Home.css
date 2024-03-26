@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+    /* Remove default margin */
+    padding: 0;
+    /* Remove default padding */
+    height: 100vh;
+    /* Make sure the body fills the entire viewport height */
+    display: flex;
+    /* Use flexbox to center content vertically */
+    justify-content: center;
+    /* Center content horizontally */
+    align-items: center;
+    /* Center content vertically */
+}
+
+.home-page {
+    background-color: rgb(255, 255, 255);
+}

@@ -22,7 +22,7 @@ body {
 
 .landing-page p {
     font-family: 'cabin';
-    font-size: 11px;
+    font-size: 12px;
     color: white;
     margin-bottom: 15%;
 }
@@ -30,7 +30,7 @@ body {
 /* LandingPage.css */
 
 .logo {
-    width: 240px;
+    width: 500px;
     /* Adjust the width of the logo */
     height: auto;
     /* Maintain aspect ratio */
@@ -39,7 +39,9 @@ body {
 .content {
     margin-top: -47px;
     /* Adjust the top margin to create space between the logo and the text */
-    margin-left: 50px;
+    margin-left: 430px;
+    position: relative;
+    top: -35px;
 }
 
 

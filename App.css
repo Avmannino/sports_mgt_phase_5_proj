@@ -1,6 +1,18 @@
 .App {
   text-align: center;
   background-color: rgb(0, 72, 100);
+  margin: 0;
+    /* Remove default margin */
+    padding: 0;
+    /* Remove default padding */
+    height: 100vh;
+    /* Make sure the body fills the entire viewport height */
+    display: flex;
+    /* Use flexbox to center content vertically */
+    justify-content: center;
+    /* Center content horizontally */
+    align-items: center;
+    /* Center content vertically */
 }
 
 .App-logo {
