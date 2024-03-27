@@ -14,60 +14,75 @@ body {
     /* Center content vertically */
 }
 
-
-
 .landing-page {
-    background-color: rgb(0, 0, 0);
+    background-image: url('./assets/landing_bg.jpg'); /* Set the background image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    height: 100vh; /* Set the height of the landing page to fill the viewport */
+    width: 100vw; /* Set the width of the landing page to fill the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-
-.landing-page p {
-    font-family: 'cabin';
-    font-size: 12px;
-    color: white;
-    margin-bottom: 15%;
-}
-
-/* LandingPage.css */
-
 .logo {
-    width: 500px;
+    
     /* Adjust the width of the logo */
-    height: auto;
+    height: 30vh;
+    width: 30vh;
     /* Maintain aspect ratio */
 }
 
+.ts-logo {
+    height: 7vh;
+    width: 35vh;
+    position: relative;
+    top: -9vh
+}
+
 .content {
-    margin-top: -47px;
+    margin-top: -3.5vh;
     /* Adjust the top margin to create space between the logo and the text */
-    margin-left: 430px;
+    margin-left: 32vh;
     position: relative;
     top: -35px;
 }
 
+.content p {
+    color: rgb(197, 197, 197);
+    font-family: nowayback;
+    font-weight: normal;
+    font-size: 1.5vh;
+    position: relative;
+    top: -3.7vh;
+    left: -4.5vh;
+    text-shadow: 0px 2.5px 6px rgba(0, 0, 0, 0.99); /* Adjust values as needed */
+}
+
 
 .landing-button {
-    font-family: Cabin;
+    font-family: nowayback;
     font-weight: 0;
-    font-size: 20px;
+    font-size: 1.5vh;
     color: #fff;
     background-color: #004864;
-    padding: 15px 25px;
+    padding: 1.5vh 2.5vh;
     border: solid #ffffff 2px;
-    box-shadow: rgb(110, 114, 115) 0px 4px 26px 4px;
-    border-radius: 30px;
+    box-shadow: rgb(0, 0, 0) 0px 4px 26px 4px;
+    border-radius: 6vh;
     transition: 300ms;
     transform: translateY(0);
     display: flex;
     flex-direction: row;
     align-items: center;
     cursor: pointer;
-    margin-right: 50px;
-    margin-left: -10px;
-    margin-top: 60px;
+    margin-right: 29vh;
+    margin-left: -1.3vh;
+    margin-top: -1vh;
 }
 
 .landing-button:hover {
-
     transition: 300ms;
     padding: 15px 25px;
     transform: translateY(-0px);
@@ -79,4 +94,9 @@ body {
 @font-face {
     font-family: "cabin";
     src: url('./fonts/cabin.ttf');
+}
+
+@font-face {
+    font-family: "nowayback";
+    src: url('./fonts/nowayback.ttf');
 }

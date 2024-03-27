@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
-import syncLogo from './assets/sync_logo.png';
+import navLogo from './assets/nav_logo.png';
 
 function Navbar() {
     const location = useLocation();
@@ -23,12 +23,13 @@ function Navbar() {
             {showLogo && (
                 <div className="nav_left">
                     <Link to="/" className="nav_logo_link">
-                        <img src={syncLogo} alt="nav_pic" className="nav_logo" />
+                        <img src={navLogo} alt="nav_pic" className="nav_logo" />
                     </Link>
                 </div>
             )}
             <ul className={active}>
                 <div className="nav_item"><Link to="/home" className="home_link">Home</Link></div>
+                <div className="nav_item"><Link to="/schedules" className="schedules_link">Schedules</Link></div>
                 <div className="nav_item sports_dropdown">
                     <Link to="/sports" className="sports_link">Sports</Link>
                     <div className="dropdown_content">
@@ -37,7 +38,6 @@ function Navbar() {
                         <Link to="/tennis" className="dropdown_item">Tennis</Link>
                     </div>
                 </div>
-                <div className="nav_item"><Link to="/schedules" className="schedules_link">Schedules</Link></div>
                 <div className="nav_item"><Link to="/pricing" className="pricing_link">Pricing</Link></div>
                 <div className="nav_item"><Link to="/settings" className="settings_link">Settings</Link></div>
             </ul>
