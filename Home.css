@@ -11,8 +11,6 @@ body {
     /* Center content horizontally */
     align-items: center;
     /* Center content vertically */
+    background-color: rgb(107, 107, 107);
 }
 
-.home-page {
-    background-color: rgb(255, 255, 255);
-}

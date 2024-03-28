@@ -1,98 +1,55 @@
-.nav {
+.navbar {
+  position: relative;
+  top: -45vh;
+  background-color: rgb(44, 62, 80);
+  /* Darker shade for modern look */
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  height: 105px; /* Adjust the height as needed */
-  width: 100%; /* Set the width to 100% to span the entire width of the viewport */
-  background: rgb(21, 31, 40);
-  position: fixed; /* Position the navbar fixed at the top of the viewport */
-  top: 0; /* Align the navbar to the top */
-  left: 0; /* Align the navbar to the left */
-  right: 0; /* Align the navbar to the right */
-  margin-left: auto; /* Center the navbar horizontally */
-  margin-right: auto; /* Center the navbar horizontally */
-  border-bottom: 3px solid rgb(68, 148, 168);
-  z-index: 1000;
-}
-
-.nav_left {
-  margin-right: 20px;
-}
-
-.nav_menu {
-  display: flex;
+  border-radius: 30px;
   align-items: center;
-  gap: 5rem; 
+  padding: 0 20px;
+  height: 60px;
+  width: 60vh;
+  border: 3px solid rgb(44, 62, 88); 
+  -webkit-box-shadow: 0px 8px 11px 0.5px #000000; 
+  box-shadow: 0px 8px 11px 0.5px #000000;
 }
 
-.nav_logo {
-  width: 30vh;
-  height: 30vh;
-  position: relative;
-  top: 0.5vh;
-  left: -5vh;
-}
-
-.home_link, .sports_link, .schedules_link, .pricing_link, .settings_link {
-  font-family: nowayback;
+/* .nav-logo {
+  color: #00ccff;
+  text-decoration: none;
+  font-size: 24px;
   font-weight: bold;
+} */
+
+.nav-items {
+  display: flex;
+}
+
+.nav-link {
+  font-family: nowayback;
+  font-size: 23px;
+  color: #bdc3c7;
+  /* Light grey for a subtle look */
   text-decoration: none;
-  font-size: 2.4vh;
-  color: rgb(145, 145, 145);
-  transition: background-color 0.1s ease-in; /* Add this line */
-  justify-content: space-around;
-  margin-right: 0.1vh;
-  position: relative;
-  left: -14vh;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-right: 5px double rgba(0, 0, 0, 1.0);
+
 }
 
-.home_link:hover, .sports_link:hover, .schedules_link:hover, .pricing_link:hover, .settings_link:hover {
-  background-color: rgb(35, 79, 90);
+.nav-link:hover,
+.nav-link:focus {
+  background-color: #ffa600;
+  /* Slightly darker on hover for contrast */
+  color: #006577;
 }
 
-.nav {
-  /* Existing styles */
-  transform: translateY(-100%);
-  transition: transform 0.5s ease-in-out;
-  will-change: transform; /* Optimizes animations */
-}
+@media (max-width: 768px) {
+  .nav-items {
+    display: none;
+    /* Simplify for mobile - consider a dropdown or toggle menu for smaller screens */
+  }
 
-.nav_active {
-  transform: translateY(0);
-}
-
-.sports_dropdown {
-  display: inline-block;
-  position: relative;
-}
-
-.dropdown_content {
-  display: block;
-  position: absolute;
-  background-color: rgb(68, 148, 168);
-  min-width: 190px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 999;
-  text-align: center;
-  top: 3.5vh; /* Adjusted to be below the 'Sports' link */
-  left: -14vh; /* Adjusted to move the dropdown to the left */
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: opacity 0.3s ease-in-out, transform 0.1s ease-in-out; /* Add transition */
-}
-
-.dropdown_content .dropdown_item {
-  color: rgb(255, 255, 255);
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown_content .dropdown_item:hover {
-  background-color: rgb(255, 255, 255);
-}
-
-.sports_dropdown:hover .dropdown_content {
-  opacity: 1;
-  transform: translateY(0);
+  /* Add mobile-specific styles here */
 }
